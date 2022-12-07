@@ -1,0 +1,84 @@
+html {
+
+    background-color: beige;
+}
+body{
+    
+    overflow: hidden;
+}
+
+#topHeader {
+    
+    height: 50px;
+    width: auto;
+    text-align: center;
+  
+}
+
+#thetaChiPicture {
+
+    text-align: center;
+
+}
+
+/* 
+LOGIN SECTION
+*/
+#logIn {
+    
+    text-align: center;
+}
+
+#logInOptions {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logIns {
+    
+    font-size: 22px;
+    margin-right: 5%;
+}
+
+.logInLables {
+    
+}
+
+.submitButton {
+    
+    margin-left: 50%;
+}
+/*
+END OF LOGIN SECTION
+*/
+
+
+/* 
+BUTTONS SECTION 
+*/
+button {
+    
+    display: inline-block;
+    background-color: darkgray;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 175px;
+    cursor: pointer;
+
+        
+}
+ button:hover {
+     
+        opacity: .8;
+}
+
+/* 
+END OF BUTTONS SECTION 
+*/

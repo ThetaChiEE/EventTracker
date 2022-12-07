@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" href= "adminEvents.css">
+        <title>Theta Chi Epsilon Eta Events</title>
+        <link rel="icon" href="../Pictures/thetaChiCrest.png">
+    </head>
+    
+    <body>
+        
+         <!-- Picture of the Theta Chi Crest  -->
+        <div id = thetaChiPicture>
+            
+            <img alt= "Picture of Theta Chi Crest" height = "136.665px" width= "101.665px" src= "../Pictures/thetaChiCrest.png" />
+        
+        </div>
+        
+        <!--Project's Title -->
+        <div id = "topHeader">
+            
+            <h1> Theta Chi Epsilon Eta Event Tracker</h1>
+            <h3> Welcome, Admin</h3>
+            
+        </div>
+        
+        
+        <!--New Event Text -->
+        <div>
+            <h2 style="margin-left: 15%; position: relative; top: -60px"> Create New Event </h2>
+    
+        </div>
+        
+        <!-- Needs a link to the event history -->
+        <a href="">
+        <h3 style="margin-left: 75%; position: relative; top: -100px"> See Event History </h3>
+        </a>
+        
+        <!--Event Information Fill-ins -->
+        <div id= createdEventInfo>
+            
+            <!-- ***form needs an action php page to go to*** -->
+            <form class= "eventsInput" action= "https://bbed-73-236-224-186.ngrok.io/COSC341Project/Admin/thePHPfile.php" method="POST">
+            
+                <!--Event Name -->
+                <label class="eventLables" for="eventName">*Event Name</label>
+                <br>
+                <input type="text" id="eventName" name="eventName" required>
+                <br><br>
+                
+                <!--Event Date and Time -->
+                <label class="eventLables" for="eventDateTime">*Event Date/Time</label>
+                <br>
+                
+                <!--Event Date -->
+                <label style="margin-left: 2px" class="eventLables" for="eventDate">Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+                <br>
+                
+                <!--Event Time -->
+                <label class="eventLables" for="eventTime">Time:</label>
+                <input type="time" id="eventTime" name="eventTime" required>
+                <br><br>
+            
+                <!--Event Location -->
+                <label class="eventLables" for="eventLocation">*Event Location</label>
+                <br>
+                <input type="text" id="eventLocation" name="eventLocation" required>
+                <br><br>
+                 
+                <!--User Emails -->
+                <label class="eventLables" for="userEmails">User Email(s)</label>
+                <br>
+                
+                <textarea placeholder= "Press Return after each email address" style="width: 200px; height: 100px; column-count: 30;"  type="text" id="userEmails" name="userEmails"></textarea>
+                <br><br>
+                
+                <!--Event Comments -->
+                <div id="comments">
+                    
+                    <label for="eventComments">Other Comments/Details</label>
+                    <br>
+                    <textarea style="width: 300px; height: 100px; column-count: 30;"  type="text" id="eventComments" name="eventComments"></textarea>
+                    
+                </div>
+                
+                <!--Submit Button -->
+                <div id="submitEvent">
+                    
+                    <button id="submitButtonAdmin" type="submit">Submit</button>
+                    
+                    <!--Back to last page -->
+                    <a href="../Admin/adminLogin.html">
+                    <h6 style=" position: relative; right: 50px;">Back to Admin Login</h6>
+                    </a>
+                    
+                </div>
+            </form> 
+        </div>
+        
+        <!--Slide show of event pictures -->
+        <div id="slideShow">
+            
+            <img style ="height: 400px; width: 400px" src="../Pictures/img1.png" id="image">
+            
+
+        </div>
+      
+        <script type="text/javascript">
+                let image = document.getElementById('image');
+                let images = ['../Pictures/img1.png', '../Pictures/img2.png', '../Pictures/img3.png', '../Pictures/img4.png']
+                
+                setInterval(function() {
+                    
+                    let random = Math.floor(Math.random() * 4);
+                    image.src = images[random];
+                }, 3200);
+            </script>
+    </body>
+</html>
